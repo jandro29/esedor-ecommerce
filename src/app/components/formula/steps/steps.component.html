@@ -1,0 +1,76 @@
+<div class="md:hidden pt-24">
+  <div class="flex justify-between items-center w-full sm:w-2/3 mx-auto mt-8 mb-12 px-4">
+    <img src="assets/images/left-arrow.svg" class="prev-btn">
+    <div class="text-center">
+      <h5 class="text-sm font-bold">{{ steps[sliderIndex].title }}</h5>
+      <p>{{ sliderIndex + 1 }}/{{ steps.length }}</p>
+    </div>
+    <img src="assets/images/right-arrow.svg" class="next-btn">
+  </div>
+  <div class="swiper-container my-auto" [swiper]="config" [(index)]="sliderIndex" #stepsSwiper>
+    <div class="swiper-wrapper">
+      <div *ngFor="let step of steps" class="swiper-slide">
+        <div class="responsive-step">
+          <div class="responsive-step__image">
+            <img src='{{ "assets/images/steps/" + step.image }}' class="w-full mb-4 mx-auto">
+          </div>
+          <div class="px-6 pt-3">
+            <h3 class="text-xl sm:text-2xl mb-3">{{ step.subtitle }}</h3>
+            <p class="text-sm">{{ step.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="block w-full text-center mt-10 mb-24">
+    <button (click)="openModal()" id="responsiveSteps" class="btn has-arrow btn-primary inline-flex items-center justify-center">
+      CONVERSEMOS
+      <img src="assets/images/right-arrow-white.svg" style="height:14px" class="ml-4">
+    </button>
+  </div>
+</div>
+
+<div class="hidden md:block">
+  <div class="flex flex-wrap items-center py-20 px-4">
+    <div class="w-1/2 lg:pl-20">
+      <h5 class="font-bold">PRIMER PASO</h5>
+      <h3 class="text-2xl lg:text-3xl font-light mb-4">Agregamos valor a tu negocio ofreciendo experiencias excepcionales</h3>
+      <p class="mb-12">Identificamos cuándo, dónde y cómo compra tu cliente usando un set de disciplinas de investigación UX.</p>
+      <button (click)="openModal()" id="desktopSteps-step-1" class="btn has-arrow btn-primary inline-flex items-center justify-center">
+        CONVERSEMOS
+        <img src="assets/images/right-arrow-white.svg" style="height:14px" class="ml-4">
+      </button>
+    </div>
+    <div class="w-1/2">
+      <img src="assets/images/steps/step-01.svg" class="w-full">
+    </div>
+  </div>
+  <div class="flex flex-wrap py-20 px-4">
+    <div class="w-1/2">
+      <img src="assets/images/steps/step-02.svg" class="w-full">
+    </div>
+    <div class="w-1/2 pl-12 lg:pl-32">
+      <h5 class="font-bold">SEGUNDO PASO</h5>
+      <h3 class="text-2xl lg:text-3xl font-light mb-4">Pensamos en la lógica y creamos un prototipo</h3>
+      <p class="mb-12">Creamos versiones interactivas de escritorio, tablet y dispositivo móvil de tu tienda virtual, plasmados en el prototipo de UX en Figma.</p>
+      <button (click)="openModal()" id="desktopSteps-step-2" class="btn has-arrow btn-primary inline-flex items-center justify-center">
+        CONVERSEMOS
+        <img src="assets/images/right-arrow-white.svg" style="height:14px" class="ml-4">
+      </button>
+    </div>
+  </div>
+  <div class="flex flex-wrap items-end xl:items-start pt-16 px-4">
+    <div class="w-1/2 lg:pl-20 pt-4 pb-8">
+      <h5 class="font-bold">TERCER PASO</h5>
+      <h3 class="text-2xl lg:text-3xl font-light mb-4">Diseñamos tu tienda virtual y sistema de diseño</h3>
+      <p class="mb-12">Creamos la identidad visual de tu marca con una guía de estilos de toda la interfaz de usuario(UI) y si deseas escalar con tu producto implementamos un sistema de diseño.</p>
+      <button (click)="openModal()" id="desktopSteps-step-3" class="btn has-arrow btn-primary inline-flex items-center justify-center">
+        CONVERSEMOS
+        <img src="assets/images/right-arrow-white.svg" style="height:14px" class="ml-4">
+      </button>
+    </div>
+    <div class="w-1/2">
+      <img src="assets/images/steps/step-03.svg" class="w-full">
+    </div>
+  </div>
+</div>

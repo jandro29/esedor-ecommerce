@@ -1,0 +1,31 @@
+.prev-btn, .next-btn {
+  &:focus {
+    outline: 0;
+  }
+}
+
+.responsive-step {
+  max-width: 400px;
+  margin: auto;
+  transition: all 0.3s;
+
+  &__image {
+    max-width: 400px;
+    width: 100%;
+    height: 250px;
+    margin: auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+  .responsive-step {
+    transform: scale(.75);
+    opacity: 0;
+  }
+}

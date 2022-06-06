@@ -1,0 +1,38 @@
+<div class="steps-slider py-16 hidden md:flex">
+  <div class="swiper-container steps-slider__container my-auto" [swiper]="config">
+    <div class="swiper-wrapper">
+      <div style="width:90%" class="swiper-slide steps-slider__item text-white px-3">
+        <div class="flex flex-wrap">
+          <div class="w-1/2 flex flex-col items-start py-8 pr-12">
+            <h5 class="font-bold">CUARTO PASO</h5>
+            <h3 class="text-2xl lg:text-3xl font-light mb-4">Definimos la tecnología y establecemos el alcance</h3>
+            <p class="mb-12">Creamos un nuevo código fuente o usamos uno de código abierto, para luego establecer los sprints necesarios para cumplir los objetivos del producto.</p>
+            <button (click)="openModal()" id="desktopSteps-step-4" class="btn has-arrow btn-primary inline-flex items-center justify-center mt-auto">
+              CONVERSEMOS
+              <img src="assets/images/right-arrow-white.svg" style="height:14px" class="ml-4">
+            </button>
+          </div>
+          <div class="w-1/2 pl-0 lg:pl-12 pr-6 lg:pr-12">
+            <img src="assets/images/steps/step-04.svg" style="height: 420px">
+          </div>
+        </div>
+      </div>
+      <div style="width:90%" class="swiper-slide steps-slider__item text-white px-3">
+        <div class="flex flex-wrap">
+          <div class="w-1/2 flex flex-col items-start py-8 pr-12">
+            <h5 class="font-bold">QUINTO PASO</h5>
+            <h3 class="text-2xl lg:text-3xl font-light mb-4">Lanzamos al mercado tu producto digital y la campaña de marketing</h3>
+            <p class="mb-12">Llegamos a más usuarios usando creando un social media plan y una campaña de Google ADS agrandando tu funnel de clientes.</p>
+            <button (click)="openModal()" id="desktopSteps-step-5" class="btn has-arrow btn-primary inline-flex items-center justify-center mt-auto">
+              CONVERSEMOS
+              <img src="assets/images/right-arrow-white.svg" style="height:14px" class="ml-4">
+            </button>
+          </div>
+          <div class="w-1/2 pl-0 lg:pl-12 pr-6 lg:pr-12">
+            <img src="assets/images/steps/step-05.svg" style="height: 420px">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

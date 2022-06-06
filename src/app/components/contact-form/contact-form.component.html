@@ -1,0 +1,52 @@
+<div class="main-form">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="main-form__content" [class.primary]="bgPrimary">
+      <div class="form-control mb-4">
+        <label for="name"
+          class="form-label-container" [class]="name.invalid ? '' : 'is-valid'">
+          <span class="form-label">Nombre</span>
+          <input
+            type="text" id="name" class="form-input"
+            formControlName="name" [attr.disabled]="isLoading ? true : null">
+        </label>
+      </div>
+      <div class="form-control mb-4">
+        <label for="correo"
+          class="form-label-container" [class]="email.invalid ? '' : 'is-valid'">
+          <span class="form-label">Correo</span>
+          <input type="text" id="correo" class="form-input"
+            formControlName="email" [attr.disabled]="isLoading ? true : null">
+        </label>
+      </div>
+      <div class="form-control mb-4">
+        <label for="celular"
+          class="form-label-container" [class]="phone.invalid ? '' : 'is-valid'">
+          <span class="form-label">Celular</span>
+          <input
+            type="tel" id="celular" class="form-input"
+            formControlName="phone" [attr.disabled]="isLoading ? true : null">
+        </label>
+      </div>
+      <div class="form-control mb-4">
+        <label for="consulta"
+          class="form-label-container" [class]="description.invalid ? '' : 'is-valid'">
+          <span class="form-label">Consulta</span>
+          <input type="text" id="consulta" class="form-input"
+            formControlName="description" [attr.disabled]="isLoading ? true : null">
+        </label>
+      </div>
+      <div class="form-captcha">
+        <re-captcha (resolved)="resolved($event)" siteKey="6LfNfKYZAAAAACappGs0nm7mzAkL_HwIc8KXWu4B"></re-captcha>
+      </div>
+    </div>
+    <button type="submit" id="desktopHero-contactForm" [disabled]="!contactForm.valid" style="height:44px" class="btn btn-primary main-form__submit flex items-center justify-center">
+      <div *ngIf="isLoading" class="lds-ellipsis">
+        <div *ngFor="let i of [1,2,3,4]"></div>
+      </div>
+      <ng-container *ngIf="!isLoading">
+        CONVERSEMOS
+        <img src="assets/images/right-arrow-white.svg" style="height:16px" class="ml-4">
+      </ng-container>
+    </button>
+  </form>
+</div>

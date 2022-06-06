@@ -1,0 +1,18 @@
+.steps-slider {
+  background: #000;
+  height: 100vh;
+  min-height: 768px;
+  max-height: 1080px;
+
+  &__container {
+    padding-left: calc((100% - 860px)/2 + 1rem);
+
+    @media screen and (min-width: 1050px) {
+      padding-left: calc((100% - 1024px)/2 + 1rem);
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding-left: calc((100% - 1140px)/2 + 1rem);
+    }
+  }
+}

@@ -1,0 +1,107 @@
+.gracias-hero {
+  background-color: #B4D2FF;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__donut, &__caja, &__carrito, &__cursor, &__poligono {
+    position: absolute;
+    user-select: none;
+  }
+
+  &__donut {
+    top: 0;
+    right: 80px;
+    transform: rotate(90deg);
+    transform-origin: right;
+  }
+
+  &__carrito {
+    display: none;
+    height: 440px;
+    bottom: 4rem;
+    right: 0rem;
+    animation: floating 5s ease-in infinite;
+
+    @media screen and (min-width: 992px) {
+      display: block;
+    }
+
+    @media screen and (min-width: 1280px) {
+      right: 5rem;
+    }
+
+    @keyframes floating {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(3rem);
+      }
+
+    }
+  }
+
+  &__poligono {
+    height: 80px;
+    left: 20px;
+    top: 2rem;
+    animation: rotate 7s linear infinite;
+
+    img {
+      height: 80px;
+    }
+
+    @media screen and (min-width: 640px) {
+      height: 120px;
+      top: 4rem;
+      left: 50px;
+
+      img {
+        height: 120px;
+      }
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &__cursor {
+    height: 100px;
+    left: 35%;
+    bottom: 30px;
+    animation: cursorTranslation 4s infinite;
+
+    @keyframes cursorTranslation {
+      0%, 100% {
+        transform: translate(0);
+      }
+
+      33% {
+        transform: translate(40px, -30px);
+      }
+
+      66% {
+        transform: translate(90px, 40px);
+      }
+    }
+
+    img {
+      height: 100px;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+.main-hero {
+  background-color: #B4D2FF;
+  position: relative;
+  overflow: hidden;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+
+  @media screen and (min-width: 768px) {
+    height: 100vh;
+    min-height: 768px;
+    max-height: 1080px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__copy {
+    @media screen and (max-width: 639px) {
+      max-width: 280px;
+      margin: auto;
+    }
+  }
+
+  &__donut, &__caja, &__carrito, &__cursor, &__poligono {
+    position: absolute;
+    user-select: none;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+
+  &__donut {
+    top: 0;
+    right: 0;
+  }
+
+  &__caja {
+    bottom: -3rem;
+    left: 0rem;
+    height: 300px;
+  }
+
+  &__carrito {
+    height: 440px;
+    bottom: 0;
+    left: calc(50% - 220px);
+    animation: floating 8s linear infinite;
+
+    @keyframes floating {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(3rem);
+      }
+
+    }
+  }
+
+  &__poligono {
+    height: 120px;
+    left: 25%;
+    top: 4rem;
+    animation: rotate 9s linear infinite;
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &__cursor {
+    height: 120px;
+    left: 55%;
+    top: 10rem;
+    animation: cursorTranslation 4s infinite;
+
+    @keyframes cursorTranslation {
+      0%, 100% {
+        transform: translate(0);
+      }
+
+      33% {
+        transform: translate(40px, -30px);
+      }
+
+      66% {
+        transform: translate(90px, 40px);
+      }
+    }
+  }
+}

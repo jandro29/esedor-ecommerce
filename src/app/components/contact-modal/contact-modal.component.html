@@ -1,0 +1,11 @@
+<div class="modal" [class.show]="showState" (click)="ClickedOut($event)">
+  <div class="modal-close" (click)="closeModal()">
+    Cerrar <div class="ml-5 modal-close__img"><img src="assets/images/close-icon.svg"></div>
+  </div>
+  <div class="modal-container flex">
+    <div class="modal__content py-8 px-8 md:px-16 hidden sm:flex items-center justify-center">
+      <h2 class="text-4xl font-light text-yellow leading-tight">Estas a un paso de vender por internet</h2>
+    </div>
+    <app-contact-form [bgPrimary]="true"></app-contact-form>
+  </div>
+</div>

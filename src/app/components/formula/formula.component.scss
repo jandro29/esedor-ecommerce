@@ -1,0 +1,33 @@
+.square {
+  display: none;
+  position: absolute;
+  width: 500px;
+  transition: all 0.2s;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+
+  &--first {
+    top: 50px;
+    right: -300px;
+  }
+
+  &--second {
+    top: 480px;
+    left: -350px;
+  }
+}
+
+.poligono {
+  display: none;
+  position: absolute;
+  width: 500px;
+  right: -350px;
+  bottom: 250px;
+  transition: all 0.3s linear;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}

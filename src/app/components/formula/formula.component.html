@@ -1,0 +1,34 @@
+<div class="overflow-hidden">
+  <div class="relative">
+    <img src="assets/images/square.png" class="square square--first">
+    <img src="assets/images/square.png" class="square square--second">
+    <img src="assets/images/poligono.png" class="poligono">
+
+    <div class="container mx-auto md:pt-16">
+      <div class="flex flex-wrap px-4">
+        <div class="w-full md:w-4/5 lg:w-3/5 mx-auto md:px-6">
+          <h5 class="font-medium text-center mb-6 text-lg md:text-base">Nuestra fórmula</h5>
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-light text-center">Te ayudamos a crear tu tienda virtual con un enfoque omnicanal.</h2>
+        </div>
+      </div>
+      <div class="flex flex-wrap px-4 mt-16">
+        <div class="w-full md:w-2/3 lg:w-2/5 mx-auto flex justify-center md:justify-between">
+          <a id="formula-callUs" class="btn btn-white items-center hidden md:flex" href="https://calendly.com/esedor-e" target="_blank">
+            <img src="assets/images/icon-phone-primary.svg" style="height:25px" class="mr-3">
+            Llámanos por
+            <img src="assets/images/hangouts-primary.svg" style="height:22px" class="ml-4">
+            <img src="assets/images/calendly-primary.svg" style="height:22px" class="ml-2">
+          </a>
+          <button (click)="handleModal()" class="btn btn-primary flex items-center justify-center">
+            CONVERSEMOS
+            <img src="assets/images/right-arrow-white.svg" style="height:14px" class="ml-4">
+          </button>
+        </div>
+      </div>
+
+      <app-steps></app-steps>
+    </div>
+  </div>
+
+  <app-steps-slider-test></app-steps-slider-test>
+</div>

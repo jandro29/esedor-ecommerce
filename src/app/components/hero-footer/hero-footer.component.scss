@@ -1,0 +1,86 @@
+.main-hero {
+  background-color: #B4D2FF;
+  position: relative;
+  overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    height: 100vh;
+    min-height: 768px;
+    max-height: 1080px;
+  }
+
+  &__copy {
+    @media screen and (max-width: 639px) {
+      max-width: 280px;
+      margin: auto;
+    }
+  }
+}
+
+.footer-hero {
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__donut, &__caja, &__carrito, &__cursor, &__poligono {
+    position: absolute;
+    user-select: none;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+
+  &__donut {
+    height: 100px;
+    left: 0;
+    bottom: 1750px;
+
+    img {
+      height: 100px;
+    }
+  }
+
+  &__caja {
+    top: -1600px;
+    right: -4rem;
+    height: 350px;
+
+    img {
+      height: 350px;
+    }
+  }
+
+  &__carrito {
+    height: 300px;
+    bottom: -450px;
+    left: calc(50% - 100px);
+
+    img {
+      height: 300px;
+      transform: rotateY(180deg);
+    }
+  }
+
+  &__poligono {
+    height: 150px;
+    left: 5rem;
+    top: -1400px;
+
+    img {
+      height: 150px;
+    }
+  }
+
+  &__cursor {
+    height: 100px;
+    right: 4rem;
+    bottom: -1600px;
+
+    img {
+      height: 100px;
+    }
+  }
+}
