@@ -34,6 +34,7 @@ import { ContactModalComponent } from './components/contact-modal/contact-modal.
 
 import { ModalService } from './modal.service';
 import { StepsSliderTestComponent } from './components/steps-slider-test/steps-slider-test.component';
+import { ComercioComponent } from './components/comercio/comercio.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { StepsSliderTestComponent } from './components/steps-slider-test/steps-s
     HeroFooterComponent,
     SelectedProjectComponent,
     ContactModalComponent,
-    StepsSliderTestComponent
+    StepsSliderTestComponent,
+    ComercioComponent
   ],
   imports: [
     BrowserModule,

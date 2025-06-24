@@ -7,44 +7,34 @@ import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
   styleUrls: ['./services.component.scss']
 })
 export class ServicesComponent implements OnInit {
-
-  services: object[];
+  imagePath: string = 'assets/images/';
+  services: { title: string, description: string, image: string }[];
 
   public config: SwiperConfigInterface = {
     slidesPerView: 'auto',
     navigation: false,
     pagination: false
-  }
+  };
 
   constructor() {
-    this.services = [];
-    this.services.push({
-    title: 'Experiencia de usuario(UX)',
-    description: 'Atiende mejor a tu cliente en todo el recorrido de la compra con un enfoque omnicanal y crece tu funnel '
-    })
-    this.services.push({
-    title: 'Branding y fotografía',
-    description: 'Crea una identidad de marca memorable, potencia tu negocio con una estrategia de marca y una dirección de arte.'
-    })
-    this.services.push({
-    title: 'Google ADS y social media',
-    description: 'Vende por internet de forma inteligente e incrementa tu funnel de ventas llegando a más personas de forma estratégica.'
-    })
-    this.services.push({
-    title: 'Programación  a medida',
-    description: 'Crece con tu modelo de negocio digital por completo en una plataforma personalizada y escalable.'
-    })
-    this.services.push({
-    title: 'Programación de código abierto',
-    description: 'Inicia de manera simple y económica  tu tienda virtual con WooCommerce, Magento, Prestashop, Shopify, WordPress.'
-    })
-    this.services.push({
-    title: 'Programación de aplicación móvil',
-    description: 'Lleva tu modelo de negocio al siguiente nivel desarrollando tu nueva app para iOS y Android.'
-    })
+    this.services = [
+      {
+        title: '"Escala tu negocio con la tecnología de los grandes"',
+        description: '"No necesitas ser una gran empresa para tener una tienda online de nivel empresarial. Con nuestra solución, tendrás acceso a las mismas herramientas y tecnología que las grandes marcas, adaptadas a las necesidades de tu negocio, sin costos excesivos."',
+        image: 'escala.svg'
+      },
+      {
+        title: '"Un equipo experto en constante evolución para tu negocio"',
+        description: '"Tu tienda estará en manos de un equipo de expertos que no solo entiende el presente, sino que está siempre a la vanguardia de las últimas tendencias y herramientas. Esto significa que tu tienda se mantendrá siempre actualizada, escalando con las necesidades de tu negocio."',
+        image: 'equipo.svg'
+      },
+      {
+        title: '"Implementación rápida, resultados inmediatos"',
+        description: 'Olvídate de meses de espera. Nuestra implementación ágil te permite lanzar tu tienda online rápidamente, sin sacrificar calidad. Implementamos las mejores prácticas de UX/UI, SEO, CRO y velocidad de carga para garantizar que cada visitante tenga la mejor experiencia de compra."',
+        image: 'implementacion.svg'
+      }
+    ];
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void { }
 }
