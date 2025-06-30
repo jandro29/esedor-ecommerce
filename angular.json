@@ -132,6 +132,10 @@
           "builder": "angular-cli-ghpages:deploy"
         }
       }
-    }},
-  "defaultProject": "frontend-angular-test"
+    }
+  },
+  "defaultProject": "frontend-angular-test",
+  "cli": {
+    "analytics": "14570a98-c3e1-4c13-891b-7e6e2883bea9"
+  }
 }
