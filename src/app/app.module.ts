@@ -35,6 +35,7 @@ import { ContactModalComponent } from './components/contact-modal/contact-modal.
 import { ModalService } from './modal.service';
 import { StepsSliderTestComponent } from './components/steps-slider-test/steps-slider-test.component';
 import { ComercioComponent } from './components/comercio/comercio.component';
+import { WhatsappComponent } from './whatsapp/whatsapp.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { ComercioComponent } from './components/comercio/comercio.component';
     SelectedProjectComponent,
     ContactModalComponent,
     StepsSliderTestComponent,
-    ComercioComponent
+    ComercioComponent,
+    WhatsappComponent
   ],
   imports: [
     BrowserModule,
