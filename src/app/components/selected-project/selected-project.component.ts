@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-selected-project',
@@ -7,47 +7,53 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectedProjectComponent implements OnInit {
 
+  @ViewChild('scrollContainer', { static: true }) scrollContainer!: ElementRef;
 
   proyectos = [
-  {
-    nombre: 'MAP-IT',
-    descripcion: `Fundado en el 2019 en la industria del Turismo es la primera
+    {
+      nombre: 'MAP-IT',
+      descripcion: `Fundado en el 2019 en la industria del Turismo es la primera
 plataforma ecommerce de experiencias inmersivas en Perú...`,
-    servicios: 'Branding, fotografía, experiencia de usuario y desarrollo a medida.',
-    imagen: 'assets/images/mapit-logo.png',
-    link: 'https://map-it.pe'
-  },
-  {
-    nombre: 'MAP-IT',
-    descripcion: `Fundado en el 2019 en la industria del Turismo es la primera
+      servicios: 'Branding, fotografía, experiencia de usuario y desarrollo a medida.',
+      imagen: 'assets/images/mapit-logo.png',
+      link: 'https://map-it.pe'
+    },
+    {
+      nombre: 'MAP-IT',
+      descripcion: `Fundado en el 2019 en la industria del Turismo es la primera
 plataforma ecommerce de experiencias inmersivas en Perú...`,
-    servicios: 'Branding, fotografía, experiencia de usuario y desarrollo a medida.',
-    imagen: 'assets/images/mapit-logo.png',
-    link: 'https://map-it.pe'
-  },
-  {
-    nombre: 'MAP-IT',
-    descripcion: `Fundado en el 2019 en la industria del Turismo es la primera
+      servicios: 'Branding, fotografía, experiencia de usuario y desarrollo a medida.',
+      imagen: 'assets/images/mapit-logo.png',
+      link: 'https://map-it.pe'
+    },
+    {
+      nombre: 'MAP-IT',
+      descripcion: `Fundado en el 2019 en la industria del Turismo es la primera
 plataforma ecommerce de experiencias inmersivas en Perú...`,
-    servicios: 'Branding, fotografía, experiencia de usuario y desarrollo a medida.',
-    imagen: 'assets/images/mapit-logo.png',
-    link: 'https://map-it.pe'
-  },
-  // Puedes agregar más proyectos aquí
-];
+      servicios: 'Branding, fotografía, experiencia de usuario y desarrollo a medida.',
+      imagen: 'assets/images/mapit-logo.png',
+      link: 'https://map-it.pe'
+    }
+  ];
 
-onScroll(event: WheelEvent) {
-  const container = document.querySelector('.horizontal-wrapper');
-  if (container) {
-    container.scrollLeft += event.deltaY;
-    event.preventDefault();
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  onScroll(event: WheelEvent): void {
+    const container = this.scrollContainer.nativeElement;
+
+    const isScrollable = container.scrollWidth > container.clientWidth;
+    const atStart = container.scrollLeft === 0;
+    const atEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth;
+
+    const goingRight = event.deltaY > 0;
+    const goingLeft = event.deltaY < 0;
+
+    // Solo aplicar scroll horizontal si hay más para deslizar
+    if (isScrollable && ((goingRight && !atEnd) || (goingLeft && !atStart))) {
+      container.scrollLeft += event.deltaY;
+      event.preventDefault(); // Evita el scroll vertical solo si hay scroll horizontal disponible
+    }
   }
-}
-
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
