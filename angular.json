@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "baseHref": "/esedor-ecommerce/",
             "customWebpackConfig": {
               "path": "./webpack.config.js"
             },

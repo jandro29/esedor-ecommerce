@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
 @Component({
   selector: 'app-comercio',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comercio.component.scss']
 })
 export class ComercioComponent implements OnInit {
+
+   public config: SwiperConfigInterface = {
+      slidesPerView: 'auto',
+      navigation: false,
+      pagination: false
+    };
 
   services = [
     {
@@ -25,6 +32,7 @@ export class ComercioComponent implements OnInit {
       description: 'Toma decisiones inteligentes con métricas en tiempo real.'
     }
   ];
+
 
   constructor() {}
 
