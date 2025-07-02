@@ -1378,7 +1378,7 @@ class GerentesComponent {
             {
                 nombre: 'Mijalys Silva',
                 descripcion: 'Más de 10 años trabajando con marcas líderes en Latinoamérica como Primax, Ripley, Niubiz y Redeban. Seleccionado por Google for Startups, combina la experiencia en ventas, branding, IA y UX para crear experiencias de aprendizaje efectivas.',
-                foto: 'assets/mijalys.jpg',
+                foto: 'assets/images/mijalys-img.jpg',
             },
             {
                 nombre: 'Jairo Cavalie',
