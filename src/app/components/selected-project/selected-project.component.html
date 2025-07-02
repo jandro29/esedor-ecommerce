@@ -1,21 +1,20 @@
-<section class="horizontal-scroll-section h-screen overflow-hidden bg-black text-white">
-  <div 
+<section class="bg-black text-white py-16 lg:h-screen lg:overflow-hidden">
+  <div
     #scrollContainer
-    class="horizontal-wrapper flex h-full overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth scrollbar-hidden"
+    class="flex flex-col lg:flex-row lg:h-full lg:overflow-x-auto lg:overflow-y-hidden snap-x snap-mandatory scroll-smooth scrollbar-hidden"
     (wheel)="onScroll($event)"
-    #scrollContainer
   >
     <div
       *ngFor="let proyecto of proyectos"
-      class="snap-start w-screen flex-shrink-0 flex items-center px-12"
+      class="snap-start w-full lg:w-screen flex-shrink-0 flex flex-col lg:flex-row items-center px-6 lg:px-12 py-12 lg:py-0"
     >
-      <div class="flex w-full flex-wrap">
-        <!-- Columna izquierda: texto -->
-        <div class="w-1/2 px-4">
-          <h5 class="text-sm mb-2">Proyecto seleccionado</h5>
-          <h2 class="text-5xl font-bold mb-4">{{ proyecto.nombre }}</h2>
-          <p class="whitespace-pre-line mb-6">{{ proyecto.descripcion }}</p>
-          <p class="mb-6">Servicios: {{ proyecto.servicios }}</p>
+      <div class="flex flex-col lg:flex-row w-full gap-6">
+        <!-- Texto -->
+        <div class="lg:w-1/2 w-full">
+          <h5 class="text-sm mb-2 uppercase text-gray-400">Proyecto seleccionado</h5>
+          <h2 class="text-3xl lg:text-5xl font-bold mb-4">{{ proyecto.nombre }}</h2>
+          <p class="whitespace-pre-line mb-6 text-base leading-relaxed">{{ proyecto.descripcion }}</p>
+          <p class="mb-6 text-sm text-gray-300">Servicios: {{ proyecto.servicios }}</p>
           <a
             [href]="proyecto.link"
             target="_blank"
@@ -26,12 +25,12 @@
           </a>
         </div>
 
-        <!-- Columna derecha: imagen -->
-        <div class="w-1/2 px-4">
+        <!-- Imagen -->
+        <div class="lg:w-1/2 w-full">
           <img
             [src]="proyecto.imagen"
-            alt="Mockup"
-            class="rounded-lg w-full h-[400px] object-cover"
+            alt="{{ proyecto.nombre }}"
+            class="rounded-lg w-full h-[250px] lg:h-[400px] object-cover"
           />
         </div>
       </div>

@@ -36,6 +36,8 @@ import { ModalService } from './modal.service';
 import { StepsSliderTestComponent } from './components/steps-slider-test/steps-slider-test.component';
 import { ComercioComponent } from './components/comercio/comercio.component';
 import { WhatsappComponent } from './whatsapp/whatsapp.component';
+import { TestimoniosComponent } from './components/testimonios/testimonios.component';
+import { GerentesComponent } from './components/gerentes/gerentes.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,9 @@ import { WhatsappComponent } from './whatsapp/whatsapp.component';
     ContactModalComponent,
     StepsSliderTestComponent,
     ComercioComponent,
-    WhatsappComponent
+    WhatsappComponent,
+    TestimoniosComponent,
+    GerentesComponent
   ],
   imports: [
     BrowserModule,

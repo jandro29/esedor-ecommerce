@@ -1,0 +1,35 @@
+<!-- MOBILE: Slider -->
+<section class="block lg:hidden bg-white py-12">
+  <div class="container mx-auto px-4">
+    <h2 class="text-center text-2xl font-bold mb-8">Nuestros Instructores</h2>
+
+    <div class="swiper-container" [swiper]="swiperConfig">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let i of instructores">
+          <div class="bg-white shadow-lg rounded-xl p-6 mx-2 flex flex-col items-center text-center">
+            <img [src]="i.foto" alt="{{ i.nombre }}" class="w-24 h-24 rounded-full mb-4 object-cover border-4 border-white shadow-md" />
+            <h3 class="text-lg font-bold text-gray-900 mb-1">{{ i.nombre }}</h3>
+            <p class="text-sm text-gray-700 font-medium leading-tight">{{ i.descripcion }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESKTOP: Grid -->
+<section class="hidden lg:block bg-white py-20">
+  <div class="container mx-auto px-4">
+    <h2 class="text-center text-3xl font-bold mb-12">Nuestros Instructores</h2>
+
+    <div class="grid grid-cols-2 gap-12">
+      <div *ngFor="let i of instructores" class="bg-white shadow-lg rounded-xl p-6 flex gap-4 items-start">
+        <img [src]="i.foto" alt="{{ i.nombre }}" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-md" />
+        <div>
+          <h3 class="text-xl font-bold text-gray-900 mb-1">{{ i.nombre }}</h3>
+          <p class="text-base text-gray-700 font-medium leading-tight">{{ i.descripcion }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
